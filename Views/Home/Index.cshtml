@@ -1,9 +1,9 @@
 ﻿<h2>Simple web app</h2>
 
 <div class="container">
-    <h3>Host name: @Environment.MachineName</h3>
+    <h3>Physical host name: @Environment.MachineName</h3>
 
-    <h3>Request: @Context.Request.Path.Value</h3>
+    <h3>Request host name: @Context.Request.Host.Value</h3>
 
     <h3>Headers</h3>
 
