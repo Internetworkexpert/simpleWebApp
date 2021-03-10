@@ -1,0 +1,22 @@
+﻿<h2>Simple web app</h2>
+
+<div class="container">
+    <h3>Host name: @Environment.MachineName</h3>
+
+    <h3>Request: @Context.Request.Path.Value</h3>
+
+    <h3>Headers</h3>
+
+    <table class="table">
+        <thead>
+            <tr><th>Key</th><th>Value</th></tr>
+        </thead>
+        <tbody>
+            @foreach (var header in Context.Request.Headers)
+            {
+                <tr><td>@header.Key</td><td>@header.Value</td></tr>
+                
+            }
+        </tbody>
+    </table>
+</div>
