@@ -1,9 +1,20 @@
-﻿<h2>Simple web app</h2>
+﻿<style>
+    .settings {
+        background-color: darkgray;
+    }
+</style>
+<h2>Simple web app</h2>
 
 <div class="container">
     <h3>Physical host name: @Environment.MachineName</h3>
 
     <h3>Request host name: @Context.Request.Host.Value</h3>
+    @if(ViewBag.ShowSetting) {
+        <section class="settings">
+        <h4>Regular app setting: @ViewBag.Regular</h4>
+        <h4>Sensitive app setting: @ViewBag.Sensitive</h4>
+        </section>
+    }
 
     <h3>Headers</h3>
 
